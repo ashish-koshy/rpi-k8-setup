@@ -1,16 +1,17 @@
 # What each of the shell scripts do?
 
-## auth-x.sh
-Grants executable privilege to scripts: `check-root.sh`, `k8s-cleanup.sh` and `k8s-install.sh`. Provided you set executable privilege `chmod +x auth-x.sh` (to `auth-x.sh` itself) before execution.
-
-## check-root.sh
-A simple reusable script to check whether `sudo` was applied to a given script execution.
+## k8s-install.sh
+Automates the installation and setup of `containered`, `kubectl`, `kubeadm` and `kubelet`. It is to be executed on every single node (including control node).
 
 ## k8s-cleanup.sh
 Automates the reset and graceful removal of `K8s`, `kubeadm`, `kubelet`, `kubectl`, `docker` and `containerd`. Please note that this will nuke everything, so take a backup of your K8 configurations before execution.
 
-## k8s-install.sh
-Automates the installation and setup of `containered`, `kubectl`, `kubeadm` and `kubelet`. It is to be executed on every single node (including control node).
+## check-root.sh
+A simple reusable script to check whether `sudo` was applied to a given script execution.
+
+## auth-x.sh
+Automates granting executable privilege to scripts: `check-root.sh`, `k8s-cleanup.sh` and `k8s-install.sh` all at once, provided you set executable privilege `chmod +x auth-x.sh` (to `auth-x.sh` itself) before execution.
+
 
 ***
 
