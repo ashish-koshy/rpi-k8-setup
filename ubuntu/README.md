@@ -1,4 +1,20 @@
-# Follow steps below post K8s installation on the control plane :-
+# What each of the shell scripts do?
+
+## auth-x.sh
+Grants executable privilege to scripts: `heck-root.sh`, `k8s-cleanup.sh` and `k8s-install.sh`. Provided you set executable privilege `chmod +x auth-x.sh` (to `auth-x.sh` itself) before execution.
+
+## check-root.sh
+A simple reusable script to check whether `sudo` was applied to a given script execution.
+
+## k8s-cleanup.sh
+Automates the reset and graceful removal of `K8s`, `kubeadm`, `kubelet`, `kubectl`, `docker` and `containerd`. Please note that this will nuke everything, so take a backup of your K8 configurations before execution.
+
+## k8s-install.sh
+Automates the installation and setup of `containered`, `kubectl`, `kubeadm` and `kubelet`. It is to be executed on every single node (including control node).
+
+***
+
+# Once you have exececuted the install script on every single node (including control node), execute the following commands on the control plane :-
 
 ## For initializing the control plane :
 
@@ -14,13 +30,18 @@
 
     kubectl cluster-info
     kubectl get nodes
+    
+Any errors might mean trouble, so try `k8s-install.sh` script a few more times for a working result. Keep `ChatGPT` or `Claude` at your disposal as debugging this will not
+be an easy feat.
 
-## Install a container network interface like Calico :
+## Install a container network interface like Calico:
+You can use a different CNI like `Flannel` or swap the version for `Calico` in the URL below with a more recent one if needed:
 
     kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.3/manifests/calico.yaml
     kubectl get pods -n kube-system
 
-## For re-printing the join command :
+## For re-printing the join command 
+Execute the output of the following command with `sudo` privilege within each of the worker nodes to let them join your cluster:
 
     sudo kubeadm token create --print-join-command
 
