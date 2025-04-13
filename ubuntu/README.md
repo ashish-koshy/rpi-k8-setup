@@ -32,7 +32,7 @@ Automates granting executable privilege to scripts: `check-root.sh`, `k8s-cleanu
     kubectl cluster-info
     kubectl get nodes
     
-I have tried my best to test and validate these scripts multiple times. But you still may come across errors. If you do, try executing `k8s-install.sh` script a few more times till you get a working result. Keep `ChatGPT` or `Claude` at your disposal as debugging this will not be an easy feat.
+I have tried my best to test and validate these scripts multiple times. But you may still come across errors. If you do, try executing `k8s-install.sh` script a few more times till you get a working result. Keep `ChatGPT` or `Claude` at your disposal as debugging this will not be an easy feat.
 
 ## Install a container network interface like Calico:
 You can use a different CNI like `Flannel` or swap the version for `Calico` in the URL below with a more recent one if needed:
