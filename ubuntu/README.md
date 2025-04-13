@@ -1,4 +1,4 @@
-# What each of the shell scripts do?
+# What each of the shell scripts do ?
 
 ## k8s-install.sh
 Automates the installation and setup of `containerd`, `kubectl`, `kubeadm` and `kubelet`. It is to be executed on every single node (including control plane).
@@ -34,13 +34,13 @@ Automates granting executable privilege to scripts: `check-root.sh`, `k8s-cleanu
     
 I have tried my best to test and validate these scripts multiple times. But you may still come across errors. If you do, try executing `k8s-install.sh` script a few more times till you get a working result. Keep `ChatGPT` or `Claude` at your disposal as debugging this will not be an easy feat.
 
-## Install a container network interface like Calico:
+## Install a container network interface like Calico :
 You can use a different CNI like `Flannel` or swap the version for `Calico` in the URL below with a more recent one if needed:
 
     kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.3/manifests/calico.yaml
     kubectl get pods -n kube-system
 
-## For re-printing the join command 
+## For re-printing the join command :
 Execute the output of the following command with `sudo` privilege within each of the worker nodes to let them join your cluster:
 
     sudo kubeadm token create --print-join-command
