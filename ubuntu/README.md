@@ -1,7 +1,7 @@
 # What each of the shell scripts do?
 
 ## k8s-install.sh
-Automates the installation and setup of `containered`, `kubectl`, `kubeadm` and `kubelet`. It is to be executed on every single node (including control node).
+Automates the installation and setup of `containerd`, `kubectl`, `kubeadm` and `kubelet`. It is to be executed on every single node (including control node).
 
 ## k8s-cleanup.sh
 Automates the reset and graceful removal of `K8s`, `kubeadm`, `kubelet`, `kubectl`, `docker` and `containerd`. Please note that this will nuke everything, so take a backup of your K8 configurations before execution.
