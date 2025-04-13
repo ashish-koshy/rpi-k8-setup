@@ -14,7 +14,7 @@ Automates the installation and setup of `containered`, `kubectl`, `kubeadm` and 
 
 ***
 
-## Once you have exececuted the install script on every single node (including control plane), execute the following commands on the control plane to begin setting up your cluster :-
+## Once you have executed the install script on every single node (including control plane), execute the following commands on the control plane to begin setting up your cluster :-
 
 ## For initializing the control plane :
 
