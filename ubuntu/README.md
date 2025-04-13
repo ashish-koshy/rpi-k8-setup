@@ -1,7 +1,7 @@
 # What each of the shell scripts do?
 
 ## auth-x.sh
-Grants executable privilege to scripts: `heck-root.sh`, `k8s-cleanup.sh` and `k8s-install.sh`. Provided you set executable privilege `chmod +x auth-x.sh` (to `auth-x.sh` itself) before execution.
+Grants executable privilege to scripts: `check-root.sh`, `k8s-cleanup.sh` and `k8s-install.sh`. Provided you set executable privilege `chmod +x auth-x.sh` (to `auth-x.sh` itself) before execution.
 
 ## check-root.sh
 A simple reusable script to check whether `sudo` was applied to a given script execution.
