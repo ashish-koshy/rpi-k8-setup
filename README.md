@@ -6,4 +6,5 @@ For OS specific instructions, refer to the `README.md` within the directory with
 
 # Demo
 [Here](https://blog.ashishkoshy.me/#/raspberry-pi-kubernetes-cluster-part-1) is my blog that extensively documents the setup of Kubernetes using Raspberry Pis. 
-This blog was served from the same cluster that it teaches you how to build!
+
+# This blog was served from the same cluster that it teaches you how to build!
